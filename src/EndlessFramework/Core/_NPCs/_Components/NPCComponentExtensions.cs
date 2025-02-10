@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace EndlessFramework.Core;
+namespace EndlessEscapade.Framework.Core;
 
 /// <summary>
-///     Provides <see cref="NPC"/> extension methods regarding <see cref="NPCComponent"/>.
+///     Provides <see cref="NPC" /> extension methods regarding <see cref="NPCComponent" />.
 /// </summary>
 /// <remarks>
 ///     Kept outside of the <c>Utilities</c> namespace for the sake of convenience.
@@ -16,7 +16,7 @@ public static class NPCComponentExtensions
         {
             return false;
         }
-        
+
         component!.Enabled = true;
 
         return true;

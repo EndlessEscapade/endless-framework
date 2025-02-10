@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace EndlessFramework.Core;
+namespace EndlessEscapade.Framework.Core;
 
 /// <summary>
-///     Provides <see cref="Projectile"/> extension methods regarding <see cref="ProjectileComponent"/>.
+///     Provides <see cref="Projectile" /> extension methods regarding <see cref="ProjectileComponent" />.
 /// </summary>
 /// <remarks>
 ///     Kept outside of the <c>Utilities</c> namespace for the sake of convenience.
@@ -16,7 +16,7 @@ public static class ProjectileComponentExtensions
         {
             return false;
         }
-        
+
         component!.Enabled = true;
 
         return true;

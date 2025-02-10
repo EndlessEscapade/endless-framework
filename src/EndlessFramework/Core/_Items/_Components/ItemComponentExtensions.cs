@@ -1,9 +1,9 @@
 ﻿using System.Diagnostics.CodeAnalysis;
 
-namespace EndlessFramework.Core;
+namespace EndlessEscapade.Framework.Core;
 
 /// <summary>
-///     Provides <see cref="Item"/> extension methods regarding <see cref="ItemComponent"/>.
+///     Provides <see cref="Item" /> extension methods regarding <see cref="ItemComponent" />.
 /// </summary>
 /// <remarks>
 ///     Kept outside of the <c>Utilities</c> namespace for the sake of convenience.
@@ -16,7 +16,7 @@ public static class ItemComponentExtensions
         {
             return false;
         }
-        
+
         component!.Enabled = true;
 
         return true;

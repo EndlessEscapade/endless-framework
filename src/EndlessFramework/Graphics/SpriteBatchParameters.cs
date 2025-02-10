@@ -1,4 +1,4 @@
-﻿namespace EndlessFramework.Graphics;
+﻿namespace EndlessEscapade.Framework.Graphics;
 
 public struct SpriteBatchParameters
 (

@@ -1,4 +1,4 @@
-﻿namespace EndlessFramework.Utilities;
+﻿namespace EndlessEscapade.Framework.Utilities;
 
 /// <summary>
 ///     Provides utility methods for tiles.
@@ -9,7 +9,7 @@ public static class TileUtils
     ///     The size of each tile frame, in pixels.
     /// </summary>
     public const float TILE_FRAME_SIZE = 16f;
-    
+
     /// <summary>
     ///     The size of the padding for each tile frame, in pixels.
     /// </summary>

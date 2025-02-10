@@ -1,6 +1,6 @@
-﻿using EndlessFramework.Utilities;
+﻿using EndlessEscapade.Framework.Utilities;
 
-namespace EndlessFramework.Core;
+namespace EndlessEscapade.Framework.Core;
 
 public abstract class ModCompositeTile : ModTile
 {
@@ -18,7 +18,7 @@ public abstract class ModCompositeTile : ModTile
     ///     Gets the number of horizontal chunks.
     /// </summary>
     public abstract int HorizontalChunkCount { get; }
-    
+
     /// <summary>
     ///     Gets the number of vertical chunks.
     /// </summary>
@@ -45,7 +45,7 @@ public abstract class ModCompositeTile : ModTile
 
         var newFrameX = 0;
         var newFrameY = 0;
-        
+
         if (tileAbove.HasTile && tileBelow.HasTile && tileLeft.HasTile && tileRight.HasTile)
         {
             newFrameX = 1;

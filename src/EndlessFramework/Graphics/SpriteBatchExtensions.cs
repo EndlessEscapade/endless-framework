@@ -1,7 +1,7 @@
-﻿namespace EndlessFramework.Graphics;
+﻿namespace EndlessEscapade.Framework.Graphics;
 
 /// <summary>
-///     Provides <see cref="SpriteBatch"/> extension methods.
+///     Provides <see cref="SpriteBatch" /> extension methods.
 /// </summary>
 /// <remarks>
 ///     Kept outside of the <c>Utilities</c> namespace for the sake of convenience.
@@ -9,13 +9,15 @@
 public static class SpriteBatchExtensions
 {
     /// <summary>
-    ///     Captures the current state of the <see cref="SpriteBatch"/> as a <see cref="SpriteBatchParameters"/> instance.
+    ///     Captures the current state of the <see cref="SpriteBatch" /> as a <see cref="SpriteBatchParameters" /> instance.
     /// </summary>
-    /// <param name="spriteBatch">The <see cref="SpriteBatch"/> to capture.</param>
-    /// <returns>A <see cref="SpriteBatchParameters"/> instance representing the current state of <paramref name="spriteBatch"/>.</returns>
+    /// <param name="spriteBatch">The <see cref="SpriteBatch" /> to capture.</param>
+    /// <returns>
+    ///     A <see cref="SpriteBatchParameters" /> instance representing the current state of
+    ///     <paramref name="spriteBatch" />.
+    /// </returns>
     public static SpriteBatchParameters Capture(this SpriteBatch spriteBatch)
-    {
-        return new SpriteBatchParameters
+        => new
         (
             spriteBatch.sortMode,
             spriteBatch.blendState,
@@ -25,16 +27,14 @@ public static class SpriteBatchExtensions
             spriteBatch.spriteEffect,
             spriteBatch.transformMatrix
         );
-    }
-    
+
     /// <summary>
-    ///     Begins the <see cref="SpriteBatch"/> using the specified <see cref="SpriteBatchParameters"/>.
+    ///     Begins the <see cref="SpriteBatch" /> using the specified <see cref="SpriteBatchParameters" />.
     /// </summary>
-    /// <param name="spriteBatch">The <see cref="SpriteBatch"/> to begin.</param>
-    /// <param name="parameters">The <see cref="SpriteBatchParameters"/> defining the state to apply.</param>
+    /// <param name="spriteBatch">The <see cref="SpriteBatch" /> to begin.</param>
+    /// <param name="parameters">The <see cref="SpriteBatchParameters" /> defining the state to apply.</param>
     public static void Begin(this SpriteBatch spriteBatch, in SpriteBatchParameters parameters)
-    {
-        spriteBatch.Begin
+        => spriteBatch.Begin
         (
             parameters.SpriteSortMode,
             parameters.BlendState,
@@ -44,5 +44,4 @@ public static class SpriteBatchExtensions
             parameters.Effect,
             parameters.TransformMatrix
         );
-    }
 }
